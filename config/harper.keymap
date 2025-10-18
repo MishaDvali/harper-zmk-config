@@ -86,12 +86,12 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans          &trans           &trans  &trans             &trans     &trans     &trans          &trans        &trans  &trans
-&trans  &trans  &trans          &trans           &trans  &trans             &trans     &trans     &trans          &trans        &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &trans  &trans             &trans     &trans     &mmv MOVE_DOWN  &mmv MOVE_UP  &trans  &trans
-&trans  &trans  &trans          &trans           &trans  &trans             &trans     &trans     &trans          &trans        &trans  &trans
-&trans  &trans  &trans          &trans           &trans  &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans          &trans        &trans  &trans  &trans
-                                                                            &trans                                                              &trans
+&trans  &trans  &trans          &trans           &trans  &trans         &trans     &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &trans          &trans           &trans  &trans         &trans     &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &trans  &trans         &trans     &trans     &mmv MOVE_DOWN  &mmv MOVE_UP  &trans  &trans
+&trans  &trans  &trans          &trans           &trans  &trans         &trans     &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &trans          &trans           &trans  &trans  &none  &mkp LCLK  &mkp MCLK  &tog 0          &mkp RCLK     &trans  &trans  &trans
+                                                                        &trans                                                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_SCROLL_UP C_AC_SCROLL_DOWN>;
