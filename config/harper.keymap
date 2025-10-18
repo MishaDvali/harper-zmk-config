@@ -79,7 +79,7 @@
 &trans     &trans    &kp LEFT   &kp RIGHT  &trans  &trans             &trans    &trans     &kp UP  &kp DOWN   &trans    &trans
 &kp CAPS   &kp F1    &kp F2     &kp F3     &kp F4  &kp F5             &kp F6    &kp F7     &kp F8  &kp F9     &kp F10   &kp F11
 &kp LGUI   &trans    &trans     &trans     &trans  &trans             &trans    &trans     &trans  &trans     &kp UP    &kp DOWN
-&trans     &kp LGUI  &kp LCTRL  &kp LALT   &trans  &trans  &kp LCTRL  &kp LALT  &kp LSHFT  &mo 4   &kp RSHFT  &kp RALT  &kp RCTRL  &trans
+&trans     &kp LGUI  &kp LCTRL  &kp LALT   &trans  &trans  &kp LCTRL  &kp LALT  &kp LSHFT  &tog 4  &kp RSHFT  &kp RALT  &kp RCTRL  &trans
                                                                       &kp RALT                                                     &kp RCTRL
             >;
         };
