@@ -20,6 +20,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEF 0
@@ -37,12 +38,12 @@
 
         default_layer {
             bindings = <
-&kp N1    &kp N1    &kp N2     &kp N3    &kp N4     &kp N5              &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp F12
-&kp RBKT  &kp Q     &kp W      &kp E     &kp R      &kp T               &kp Y      &kp U      &kp I      &kp O      &kp P      &kp LBKT
-&kp TAB   &kp A     &kp S      &kp D     &kp F      &kp G               &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp APOS
-&kp ESC   &kp Z     &kp X      &kp C     &kp V      &kp B               &kp GRAVE  &kp CAPS   &kp N      &kp M      &kp COMMA  &kp DOT
-&kp FSLH  &kp LGUI  &kp LCTRL  &kp LALT  &kp GRAVE  &kp LALT  &kp BSPC  &kp LSHFT  &kp GRAVE  &kp ENTER  &kp SPACE  &kp LBKT   &kp RCTRL  &mo 2
-                                                                        &kp RALT                                                          &kp RCTRL
+&kp N1    &kp N1    &kp N2     &kp N3    &kp N4  &kp N5              &kp N6     &kp N7    &kp N8     &kp N9     &kp N0     &kp F12
+&kp RBKT  &kp Q     &kp W      &kp E     &kp R   &kp T               &kp Y      &kp U     &kp I      &kp O      &kp P      &kp LBKT
+&mo 3     &kp A     &kp S      &kp D     &kp F   &kp G               &kp H      &kp J     &kp K      &kp L      &kp SEMI   &kp APOS
+&kp ESC   &kp Z     &kp X      &kp C     &kp V   &kp B               &kp GRAVE  &kp CAPS  &kp N      &kp M      &kp COMMA  &kp DOT
+&kp FSLH  &kp LGUI  &kp LCTRL  &kp LALT  &tog 4  &kp LALT  &kp BSPC  &kp LSHFT  &mo 1     &kp ENTER  &kp SPACE  &kp LBKT   &kp RCTRL  &mo 2
+                                                                     &kp RALT                                                         &kp RCTRL
             >;
 
             sensor-bindings =
@@ -72,15 +73,28 @@
             >;
         };
 
-        layer_3 {
+        hotkeys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                        &trans                                          &trans
+&kp GRAVE  &trans    &trans     &trans     &trans  &trans             &trans    &trans     &trans  &trans     &trans    &kp F12
+&trans     &trans    &kp LEFT   &kp RIGHT  &trans  &trans             &trans    &trans     &kp UP  &kp DOWN   &trans    &trans
+&kp CAPS   &kp F1    &kp F2     &kp F3     &kp F4  &kp F5             &kp F6    &kp F7     &kp F8  &kp F9     &kp F10   &kp F11
+&kp LGUI   &trans    &trans     &trans     &trans  &trans             &trans    &trans     &trans  &trans     &kp UP    &kp DOWN
+&trans     &kp LGUI  &kp LCTRL  &kp LALT   &trans  &trans  &kp LCTRL  &kp LALT  &kp LSHFT  &mo 4   &kp RSHFT  &kp RALT  &kp RCTRL  &trans
+                                                                      &kp RALT                                                     &kp RCTRL
             >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans          &trans           &trans  &trans             &trans     &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &trans          &trans           &trans  &trans             &trans     &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &trans  &trans             &trans     &trans     &mmv MOVE_DOWN  &mmv MOVE_UP  &trans  &trans
+&trans  &trans  &trans          &trans           &trans  &trans             &trans     &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &trans          &trans           &trans  &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans          &trans        &trans  &trans  &trans
+                                                                            &trans                                                              &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
