@@ -1,8 +1,32 @@
+#undef ZMK_BEHAVIORS_KEEP_ALL
+
+#define ZMK_BEHAVIORS_KEEP_IND
+#define ZMK_BEHAVIORS_KEEP_BT
+#define ZMK_BEHAVIORS_KEEP_GRESC
+#define ZMK_BEHAVIORS_KEEP_SYS_RESET
+#define ZMK_BEHAVIORS_KEEP_BOOTLOADER
+#define ZMK_BEHAVIORS_KEEP_CAPS_WORD
+#define ZMK_BEHAVIORS_KEEP_KEY_REPEAT
+#define ZMK_BEHAVIORS_KEEP_KT
+#define ZMK_BEHAVIORS_KEEP_LT
+#define ZMK_BEHAVIORS_KEEP_MT
+#define ZMK_BEHAVIORS_KEEP_SK
+#define ZMK_BEHAVIORS_KEEP_STICKY_LAYER
+
+#define ZMK_BEHAVIORS_KEEP_TO
+#define ZMK_BEHAVIORS_KEEP_TOG
+#define ZMK_BEHAVIORS_KEEP_TRANS
+
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/indicators.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define LWR 1
@@ -73,5 +97,4 @@
                                                            &trans                                                                         &trans
             >;
         };
-    };
 };
